@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>PHP-FPM Process Caluculator</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.0/rangeslider.min.css"/>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-9 col-sm-12">
+            <div class="card">
+                <header class="card-header">
+                    <h4 class="card-title mt-2">PHP-FPM Process Calculator</h4>
+                </header>
+                <div class="row p-3">
+                    <div class="col-md-12 col-sm-12= col-xs-12 form-container">
+                        <form name="form1" method="post">
+                            <div class="form-group ">
+                                <label class="control-label requiredField" for="ram-total">
+                                    Total Ram (Gb)
+                                </label>
+                                <input class="form-control" id="ram-total" name="ram-total" type="range" min="1"
+                                       max="64" step="1" value="4" aria-readonly="true" readonly/>
+                            </div>
+                            <div class="form-group ">
+                                <label class="control-label requiredField" for="ram-total">
+                                    Reserved Ram (Gb)
+                                </label>
+                                <input class="form-control" id="ram-reserved" name="ram-reserved" type="range"
+                                       min="0.25" max="64" step="0.25" value="1" aria-readonly="true" readonly/>
+                            </div>
+                            <div class="form-group ">
+                                <label class="control-label requiredField" for="ram-buffer">
+                                    RAM Buffer (%)
+                                </label>
+                                <div class="input-group">
+                                    <input class="form-control" id="ram-buffer" name="ram-buffer" type="range" min="0"
+                                           max="100" step="1" value="10" aria-readonly="true" readonly/>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <label class="control-label requiredField" for="process-size">
+                                    Process size (Mb)
+                                </label>
+                                <input class="form-control" id="process-size" name="process-size" type="range" min="1"
+                                       max="1024" step="1" value="32" aria-readonly="true" readonly/>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label " for="ram-available">
+                                    Available RAM (Gb)
+                                </label>
+                                <input class="form-control" id="ram-available" name="ram-available" type="text"
+                                       aria-readonly="true" readonly/>
+                            </div>
+                            <div class="form-group ">
+                                <label class="control-label " for="ram-available-mb">
+                                    Available RAM (Mb)
+                                </label>
+                                <input class="form-control" id="ram-available-mb" name="ram-available-mb" type="text"
+                                       aria-readonly="true" readonly/>
+                            </div>
+                            <div class="form-group ">
+                                <label class="control-label " for="max-children">
+                                    pm.max_children
+                                </label>
+                                <input class="form-control" id="max-children" name="max-children" type="text"
+                                       aria-readonly="true" readonly/>
+                            </div>
+                            <div class="form-group ">
+                                <label class="control-label " for="start-servers">
+                                    pm.start_servers
+                                </label>
+                                <input class="form-control" id="start-servers" name="start-servers" type="text"
+                                       aria-readonly="true" readonly/>
+                            </div>
+                            <div class="form-group ">
+                                <label class="control-label " for="min-spare">
+                                    pm.min_spare_servers
+                                </label>
+                                <input class="form-control" id="min-spare" name="min-spare" type="text"
+                                       aria-readonly="true" readonly/>
+                            </div>
+                            <div class="form-group ">
+                                <label class="control-label " for="max-spare">
+                                    pm.max_spare_servers
+                                </label>
+                                <input class="form-control" id="max-spare" name="max-spare" type="text"
+                                       aria-readonly="true" readonly/>
+                            </div>
+
+                        </form>
+                        <form name="form1" method="post" name="coptypaste" id="copypaste">
+                            <div class="form-group">
+                                <label for="copyPasteArea">php pool settings / tuning</label>
+                                <textarea class="form-control" name="copyPasteArea" id="copyPasteArea"
+                                          rows="4"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.0/rangeslider.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
