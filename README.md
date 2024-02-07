@@ -22,8 +22,3 @@ S    33 25319 24439  2  80   0 61620 63314 -      ?        00:02:35 php-fpm
 
 In this example 61588 kilobytes or converted about +- 60 Mb per process.
 
-# License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-Demo: [https://spot13.com/pmcalculator](https://spot13.com/pmcalculator)
